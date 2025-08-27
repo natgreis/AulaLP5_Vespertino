@@ -5,6 +5,7 @@
 package tools;
 
 import javax.swing.JComponent;
+import javax.swing.JTextField;
 
 /**
  *
@@ -15,6 +16,12 @@ public class Util {
         for (int i = 0; i < componentes.length; i++) {
             componentes[i].setEnabled(valor);
             
+        }
+    }
+    public static void limpar(JComponent ... componentes){
+        for (int i = 0; i < componentes.length; i++){
+           ((JTextField) componentes[i]).setText(""); 
+           //instanceof pesquisar oq é "no jdlgusuarios tem um cbo que causa erro, usar esse instance e peesquisar oq é
         }
     }
 }

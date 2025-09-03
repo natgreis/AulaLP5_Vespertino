@@ -245,6 +245,8 @@ public class JDlgUsuarios extends javax.swing.JDialog {
         Util.habilitar(true, jTxtNome, jTxtCodigo, jTxtApelido, jFmtCpf, jFmtDataDeNascimento,
                 jPwfSenha, jCboNivel, jChbAtivo, jBtnConfirmar, jBtnCancelar);
         Util.habilitar(false, jBtnAlterar, jBtnExcluir, jBtnIncluir, jBtnPesquisar);
+        Util.limpar(jTxtCodigo, jTxtApelido, jTxtNome);
+        Util.mensagem("nao implementado");
 
 
     }//GEN-LAST:event_jBtnIncluirActionPerformed
@@ -256,13 +258,13 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
         // TODO add your handling code here:
-
+         Util.pergunta("Deseja Excluir?");
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
         // TODO add your handling code here:
-
+        int cod = Util.strToInt(jTxtCodigo.getText());
 
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
